@@ -4,8 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class JobTest {
 
@@ -44,5 +43,13 @@ public class JobTest {
     public void testJobsForEquality() {
         assertFalse(job3.equals(job4));
     }
+
+    @Test
+    public void jobToStringMethodHasFirstLine() {
+        // scans first line of toString output and verifies it's a line
+        assertEquals("=====", job3.toString());
+    }
+
+    // another test to scan last line of toString output that verifies it's a line
 
 }
