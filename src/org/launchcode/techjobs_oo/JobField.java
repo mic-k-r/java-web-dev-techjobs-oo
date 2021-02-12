@@ -14,6 +14,9 @@ public abstract class JobField {
 
     public JobField(String value) {
         this.value = value;
+        if (value.equals("")) {
+            this.value = "Data is unavailable";
+        }
     }
 
     // Custom toString:
